@@ -54,10 +54,13 @@ function operatorCall(op){
         if(input){
           record_object.first_value = input;
           input = "";
+        } else {
+            record_object.first_value = 0;
+            input = "";
         }
-        // console.log(record);
         if(record){
             textInput.innerText = "";
+            input = "";
         }
         if(history_record){
             record_object.first_value = history_record;
@@ -192,17 +195,27 @@ function showHistory()
     document.getElementById('hide').style.display = "block"
     document.getElementById('animation').style.display = 'block';
     document.getElementById('historyinfo').innerHTML = "";
+    
     record_array.forEach((arr,index) => {
         // if(!arr.first_value || !arr.second_value || !arr.final_ans){
         //     document.getElementById('historyinfo').innerHTML = "";
         // } else {
-        document.getElementById('historyinfo').innerHTML += "<li onclick='getData("+ index +");' style='border:1px solid; border-radius:10px; padding-left:5px; margin-top:4px;'><b>" + arr.first_value + " " + arr.op + " " + arr.second_value + "=" + " " + "<span style='color:green;'>" + arr.final_ans + "</span></b></li>";
+        document.getElementById('historyinfo').innerHTML += "<tr><td>" + arr.first_value + "</td><td>" + arr.op + "</td><td>" + arr.second_value + "</td><td style='color:green'>" + arr.final_ans + "</td><td><button onclick='getData("+ index +");' style='border:none; width:25px; height:25px;background-color: rgb(253, 247, 247);'><img src='image/cast.svg'></button>" + " " + "<button onclick='deleteHistoryData("+ index +");' style='border:none; width:25px; height:25px;background-color: rgb(253, 247, 247);'><img src='image/trash.svg'></button>"+"</td></tr>";
+        // document.getElementById('historyinfo').innerHTML += "<li onclick='getData("+ index +");' style='border:1px solid; border-radius:10px; padding-left:5px; margin-top:4px;'><b>" + arr.first_value + " " + arr.op + " " + arr.second_value + "=" + " " + "<span style='color:green;'>" + arr.final_ans + "</span></b></li>";
         // }
     });
     // for(let index=0;index < record_array.length;index++)
     //   {
     //   document.getElementById('historyinfo').innerHTML += "<li onclick='getData(this);' style='border:1px solid; border-radius:10px; padding-left:5px; margin-top:4px;'><b>" + record_array[index].first_value + " " + record_array[index].op + " " + record_array[index].second_value + "=" + " " + "<span style='color:green;'>" + record_array[index].final_ans + "</span></b></li>";
     //   }
+}
+
+function deleteHistoryData(data_index){
+    console.log(record_array);
+    alert("remove");
+    removed = record_array.slice(data_index, 1);
+    console.log(record_array);
+    return record_array;
 }
 
 function hideHistory()

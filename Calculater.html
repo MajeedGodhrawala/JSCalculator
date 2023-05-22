@@ -40,9 +40,19 @@
             </div>
             <div style="display: none;" id="animation" class="historydiv">
                 <div class="historystorage">
-                    <ul>
-                        <p id="historyinfo"></p>
-                    </ul>
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                          <!-- <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Num 1</th>
+                            <th scope="col">Opera</th>
+                            <th scope="col">Num 2</th>
+                          </tr> -->
+                        </thead>
+                            <tbody id="historyinfo">
+                                <!-- History Content -->
+                            </tbody>
+                    </table>
                     <button onclick="clearHistory()" class="btn btn-outline-danger" style="position: absolute; bottom: 5px; right: 5px;border-radius: 50%; border: none;"><img src="image/trash.svg"></button>
                 </div>
             </div>
