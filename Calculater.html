@@ -52,36 +52,36 @@
             <!-- Button -->
             <div class="btnGroup">
                 <div class="row mb-3">
-                    <div class="col-3"><button class="calbtn" onclick="deleteLastCharacter()"><</button></div>
-                    <div class="col-3"><button class="calbtn" onclick="deleteData()">C</button></div>
-                    <div class="col-3"><button value="^" class="calbtn" onclick="operatorCall('^')">^</button></div>
-                    <div class="col-3"><button value="/" class="calbtn" onclick="operatorCall('/')">÷</button></div>
+                    <div class="col-3"><button class="calbtn" id="delete_last_digit"><</button></div>
+                    <div class="col-3"><button class="calbtn" id="clear">C</button></div>
+                    <div class="col-3"><button value="^" class="calbtn op" >^</button></div>
+                    <div class="col-3"><button value="/" class="calbtn op" >÷</button></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-3"><button value="7" class="calbtn" onclick="numberCall(7)">7</button></div>
-                    <div class="col-3"><button value="8" class="calbtn" onclick="numberCall(8)">8</button></div>
-                    <div class="col-3"><button value="9" class="calbtn" onclick="numberCall(9)">9</button></div>
-                    <div class="col-3"><button value="*" class="calbtn" onclick="operatorCall('*')">×</button></div>
+                    <div class="col-3"><button value="7" class="calbtn digit">7</button></div>
+                    <div class="col-3"><button value="8" class="calbtn digit">8</button></div>
+                    <div class="col-3"><button value="9" class="calbtn digit">9</button></div>
+                    <div class="col-3"><button value="*" class="calbtn op">×</button></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-3"><button value="4" class="calbtn" onclick="numberCall(4)">4</button></div>
-                    <div class="col-3"><button value="5" class="calbtn" onclick="numberCall(5)">5</button></div>
-                    <div class="col-3"><button value="6" class="calbtn" onclick="numberCall(6)">6</button></div>
-                    <div class="col-3"><button value="-" class="calbtn" onclick="operatorCall('-')">-</button></div>
+                    <div class="col-3"><button value="4" class="calbtn digit">4</button></div>
+                    <div class="col-3"><button value="5" class="calbtn digit">5</button></div>
+                    <div class="col-3"><button value="6" class="calbtn digit">6</button></div>
+                    <div class="col-3"><button value="-" class="calbtn op">-</button></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-3"><button value="1" class="calbtn" onclick="numberCall(1)">1</button></div>
-                    <div class="col-3"><button value="2" class="calbtn" onclick="numberCall(2)">2</button></div>
-                    <div class="col-3"><button value="3" class="calbtn" onclick="numberCall(3)">3</button></div>
-                    <div class="col-3"><button value="+" class="calbtn" onclick="operatorCall('+')">+</button></div>
+                    <div class="col-3"><button value="1" class="calbtn digit">1</button></div>
+                    <div class="col-3"><button value="2" class="calbtn digit">2</button></div>
+                    <div class="col-3"><button value="3" class="calbtn digit">3</button></div>
+                    <div class="col-3"><button value="+" class="calbtn op">+</button></div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-3"><button value="0" class="calbtn" onclick="numberCall(0)">0</button></div>
-                    <div class="col-3"><button value="." class="calbtn" onclick="numberCall('.')">.</button></div>
-                    <div class="col-3"><button value="/" class="calbtn" onclick="operatorCall('/')">/</button></div>
+                    <div class="col-3"><button value="0" class="calbtn digit">0</button></div>
+                    <div class="col-3"><button value="." class="calbtn digit">.</button></div>
+                    <div class="col-3"><button value="/" class="calbtn op">/</button></div>
                     <div class="col-3"><button style="width:50px !important; height: 50px !important; 
                     position: absolute !important; right: 35px !important; background-color: #62c070 !important;"
-                     class="calbtn" onclick="calculate()">=</button></div>
+                     class="calbtn" id="calculate">=</button></div>
                 </div>
             </div>
             <!-- Button End -->

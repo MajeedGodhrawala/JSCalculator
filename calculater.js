@@ -1,4 +1,4 @@
-let input = "0";
+let input = "";
 let digit = "";
 let record = "";
 let record_object = {};
@@ -11,10 +11,32 @@ const inputdiv = document.getElementById('inputans');
 const operators = ['+', '-', '/', '*', '^'];
 const numbers = ['1','2','3','4','5','6','7','8','9','0','.'];
 
+const digit_buttons = document.getElementsByClassName("digit");
+Array.from(digit_buttons).forEach(button => button.addEventListener("click", (event) => {
+    numberCall(event.target.value);
+}))
+
+const op_buttons = document.getElementsByClassName("op");
+Array.from(op_buttons).forEach(button => button.addEventListener("click",(event) => {
+    operatorCall(event.target.value);
+}))
+
+
+const to_calculate = document.getElementById('calculate');
+to_calculate.addEventListener("click",calculate);
+
+const to_delete_last_digit = document.getElementById('delete_last_digit');
+to_delete_last_digit.addEventListener("click",deleteLastCharacter);
+
+const to_clear = document.getElementById('clear');
+to_clear.addEventListener("click",deleteData);
+
 function numberCall(num){
+    // console.log(num);
     // digit = num;
+    // let num = event.target.value
     validation(input);
-    if(num == "." && display.includes('.')) {
+    if(num == "." && input.includes('.')) {
         input = document.getElementById("input").innerHTML += "";
     }  else {
         input = document.getElementById("input").innerHTML += num;
@@ -22,6 +44,7 @@ function numberCall(num){
 }
 
 function operatorCall(op){
+    // let op = event.target.value
    if(operators.includes(((historyLine.innerText).slice(-1)))) {
         record = historyLine.innerText = historyLine.innerText.slice(0, historyLine.innerText.length - 1);
         record = historyLine.innerText += op; 
@@ -32,6 +55,7 @@ function operatorCall(op){
           record_object.first_value = input;
           input = "";
         }
+        // console.log(record);
         if(record){
             textInput.innerText = "";
         }
@@ -46,7 +70,7 @@ function operatorCall(op){
         record = historyLine.innerText += textInput.innerText + "" + op;
         textInput.innerText = '';
         record_object.op = op;    
-        console.log(record_object.op);
+        // console.log(record_object.op);
         } 
    }
 }
@@ -84,9 +108,10 @@ function calculate()
       }
       record_object.final_ans = parseFloat(record);
       console.log(record_object);
+      console.log(record_array);
       record_array.push(record_object); 
       historyLine.innerText = record ; 
-      display = record;
+      input = record;
       record_object = {};
     } else {
         document.getElementById("errorbox").innerHTML = "Nothing To Calculate !";
@@ -109,7 +134,7 @@ function deleteLastCharacter(){
 }
 
 function deleteData(){
-    PictureInPictureWindow = "";
+    // input="";
     record = "";
     record_object.first_value = "";
     record_object.op = "";
@@ -119,7 +144,7 @@ function deleteData(){
     input = document.getElementById("input").innerHTML = input;
     record = document.getElementById("record").innerHTML = record;
     validation(input);
-    return input = 0;
+    return input = "0";
 }
 
 function validation(input){
@@ -168,11 +193,11 @@ function showHistory()
     document.getElementById('animation').style.display = 'block';
     document.getElementById('historyinfo').innerHTML = "";
     record_array.forEach((arr,index) => {
-        if(!arr.first_value || !arr.second_value || !arr.final_ans){
-            document.getElementById('historyinfo').innerHTML = "";
-        } else {
+        // if(!arr.first_value || !arr.second_value || !arr.final_ans){
+        //     document.getElementById('historyinfo').innerHTML = "";
+        // } else {
         document.getElementById('historyinfo').innerHTML += "<li onclick='getData("+ index +");' style='border:1px solid; border-radius:10px; padding-left:5px; margin-top:4px;'><b>" + arr.first_value + " " + arr.op + " " + arr.second_value + "=" + " " + "<span style='color:green;'>" + arr.final_ans + "</span></b></li>";
-        }
+        // }
     });
     // for(let index=0;index < record_array.length;index++)
     //   {
@@ -210,6 +235,12 @@ inputdiv.addEventListener('keydown', (event) => {
     }
     if(event.key == "Backspace"){
         deleteLastCharacter()
+    }
+    if(event.key == "h" || event.key == "H"){
+        showHistory()
+    }
+    if(event.key == "c" || event.key == "C"){
+        deleteData()
     }
 });
 
