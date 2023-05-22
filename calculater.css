@@ -1,154 +1,163 @@
-body{
-    width: 100%;
-    height: 100%;
-    /* display: flex; */
+body {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
   background-color: DodgerBlue !important;
 }
-.calposition{
-    margin: 1% auto;
-    position: relative;
-    border-radius: 20px !important;
-    width: 340px !important;
-    height: 630px !important;
-    background-color: #262626 ;
-    overflow: hidden;
+.calposition {
+  margin: 1% auto;
+  position: relative;
+  border-radius: 20px !important;
+  width: 340px !important;
+  height: 630px !important;
+  background-color: #262626;
+  overflow: hidden;
 }
-.calposition .calNav{
-    /* background-color: white !important; */
-    margin: 0% auto;
-    width: 95%;
-    border-radius: 10px;
-    height: 30px;
-    overflow: hidden;
+.calposition .calNav {
+  /* background-color: white !important; */
+  margin: 0% auto;
+  width: 95%;
+  border-radius: 10px;
+  height: 30px;
+  overflow: hidden;
 }
-.themebtn{
-    position: absolute;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
+.themebtn {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
 }
-.calScreen{
-    /* background-color: white !important; */
-    margin: 2% auto;
-    margin-top: 20px;
-    width: 95%;
-    border-radius: 10px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
+.calScreen {
+  /* background-color: white !important; */
+  margin: 2% auto;
+  margin-top: 20px;
+  width: 95%;
+  border-radius: 10px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
-.calScreen .finalinput{
-    /* background-color: rgb(0, 0, 0); */
-    position: absolute;
-    color: #fefefe;
-    width: 80%;
+.calScreen .finalinput {
+  /* background-color: rgb(0, 0, 0); */
+  position: absolute;
+  color: #fefefe;
+  width: 80%;
 
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: inherit;
-    direction: rtl;
-    top: 140px;
-    height: 30px;
-    display: flex;
-    /* extra comment */
-    /* extra comment */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inherit;
+  direction: rtl;
+  top: 140px;
+  height: 30px;
+  display: flex;
+  /* extra comment */
+  /* extra comment */
+  /* extra comment */
+  /* extra comment */
 
-    justify-content: center;
-    justify-items: center;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Goudy Old Style ;
+  justify-content: center;
+  justify-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Goudy Old Style;
 }
-.calScreen .inputdisplay{
-    /* background-color: rgb(0, 0, 0); */
-    position: absolute;
-    color: #fefefe;
-    width: 50%;
-    top: 170px;
-    height: 60px;
-    display: flex;
-    justify-content: flex-end;
-    display: inline-flex;
-    white-space: nowrap;
-    overflow: hidden;
-    font-weight: bold;
-    font-size: 50px;
-    font-family: Goudy Old Style ;
-    /* overflow: hidden; */
+.calScreen .inputdisplay {
+  /* background-color: rgb(0, 0, 0); */
+  position: absolute;
+  color: #fefefe;
+  width: 50%;
+  top: 170px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  display: inline-flex;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Goudy Old Style;
+  /* overflow: hidden; */
 }
-.calScreen .errordisplay{
-    /* background-color: rgb(0, 0, 0); */
-    position: absolute;
-    width: 70%;
-    top: 250px;
-    right: 10px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    justify-items: right;
-    font-weight: bold;
-    font-family: Goudy Old Style ;
+.calScreen .errordisplay {
+  /* background-color: rgb(0, 0, 0); */
+  position: absolute;
+  width: 70%;
+  top: 250px;
+  right: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  justify-items: right;
+  font-weight: bold;
+  font-family: Goudy Old Style;
 }
-.design{
-    background-color: #000000 ;
-    float: right;
-    width: 22%;
-    position: absolute;
-    right: 0px;
-    border-top-left-radius: 70px;
-    border-bottom-left-radius: 70px;
-    margin-top: 10px;
-    height: 320px;
+.design {
+  background-color: #000000;
+  float: right;
+  width: 22%;
+  position: absolute;
+  right: 0px;
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  margin-top: 10px;
+  height: 320px;
 }
-.btnGroup{
-    /* background-color: aliceblue; */
-    padding: 5px;
-    width: 100%;
-    height: 300px;
-    margin: 1% auto;
-    margin-top: 30px;
-    position: absolute;
-    z-index: 10;
-
+.btnGroup {
+  /* background-color: aliceblue; */
+  padding: 5px;
+  width: 100%;
+  height: 300px;
+  margin: 1% auto;
+  margin-top: 30px;
+  position: absolute;
+  z-index: 10;
 }
 .calbtn {
-    border-radius: 50%;
-    border: none;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    font-weight: bold;
-    background-color: #262626 ;
-    color: #fefefe;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 50%;
+  border: none;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #262626;
+  color: #fefefe;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.historydiv{
-    border-radius: 20px;
-    width: 90%;
-    height: 350px;
-    position: absolute;
-    animation: frombottom 5s 1;
-    /* overflow: hidden; */
-    animation-direction: alternate;
-    z-index: 11 ;
-    background-color: rgb(253, 247, 247);
+.historydiv {
+  border-radius: 20px;
+  width: 90%;
+  height: 350px;
+  position: absolute;
+  animation: frombottom 5s 1;
+  /* overflow: hidden; */
+  animation-direction: alternate;
+  z-index: 11;
+  background-color: rgb(253, 247, 247);
 }
 @keyframes frombottom {
-    0%  {left: 17px; bottom: -350px;}
-    25% {left: 17px; bottom: 5px;}
+  0% {
+    left: 17px;
+    bottom: -350px;
   }
+  25% {
+    left: 17px;
+    bottom: 5px;
+  }
+}
 
-.historystorage{
-    width: 85%;
-    margin: 1% auto;
-    height: 100%;
-    padding: 4px;
-    /* overflow: scroll; */
-    /* background-color: black; */
+.historystorage {
+  width: 85%;
+  margin: 1% auto;
+  height: 100%;
+  padding: 4px;
+  /* overflow: scroll; */
+  /* background-color: black; */
 }
 
 /* https://dribbble.com/shots/6902536--004-Calculator */
