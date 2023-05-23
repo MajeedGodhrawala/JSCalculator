@@ -195,7 +195,12 @@ function showHistory()
     document.getElementById('hide').style.display = "block"
     document.getElementById('animation').style.display = 'block';
     document.getElementById('historyinfo').innerHTML = "";
-    
+    historyArray(record_array);
+}
+
+function historyArray(record_array)
+{
+    document.getElementById('historyinfo').innerHTML = "";
     record_array.forEach((arr,index) => {
         // if(!arr.first_value || !arr.second_value || !arr.final_ans){
         //     document.getElementById('historyinfo').innerHTML = "";
@@ -211,11 +216,8 @@ function showHistory()
 }
 
 function deleteHistoryData(data_index){
-    console.log(record_array);
-    alert("remove");
-    removed = record_array.slice(data_index, 1);
-    console.log(record_array);
-    return record_array;
+    removed = record_array.splice(data_index, 1);
+    historyArray(record_array);
 }
 
 function hideHistory()
