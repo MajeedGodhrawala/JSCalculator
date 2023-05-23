@@ -233,29 +233,55 @@ function clearHistory(){
 }
 
 function focusonInput(){
+    alert("Focus ON")
     inputdiv.focus();
 }
 
 inputdiv.focus();
 
 inputdiv.addEventListener('keydown', (event) => {
+    // console.log(event.key)
     if(numbers.includes(event.key)){
         numberCall(event.key);
     }
     if(operators.includes(event.key)){
         operatorCall(event.key);
     }
+    // if(event.key == "Enter"){
+    //     calculate();
+    // }
+    if(event.key == "Backspace"){
+        deleteLastCharacter();
+    }
+    // if(event.key == "h" || event.key == "H"){
+    //     showHistory();
+    // }
+    // if(event.key == "c" || event.key == "C"){
+    //     deleteData();
+    // }
+    // if(event.key == "Escape"){
+    //     hideHistory();
+    // }
+    // if(event.key == "Tab"){
+    //     focusonInput();
+    // }
+});
+
+document.addEventListener('keydown', (event) => {
+    // console.log(event.key)
     if(event.key == "Enter"){
         calculate();
     }
-    if(event.key == "Backspace"){
-        deleteLastCharacter()
-    }
     if(event.key == "h" || event.key == "H"){
-        showHistory()
+        showHistory();
     }
     if(event.key == "c" || event.key == "C"){
-        deleteData()
+        deleteData();
+    }
+    if(event.key == "Escape"){
+        hideHistory();
+    }
+    if(event.key == "Tab"){
+        focusonInput();
     }
 });
-
